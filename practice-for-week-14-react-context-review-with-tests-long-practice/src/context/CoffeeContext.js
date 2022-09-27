@@ -8,6 +8,7 @@ export default function CoffeeProvider(props) {
 
   const setCoffeeBeanId = (coffeeBeanId) => {
     const bean = coffeeBeans.find(bean => {
+      console.log('set to', bean.id)
       return Number(bean.id) === Number(coffeeBeanId)
     });
     setCoffeeBean(bean);

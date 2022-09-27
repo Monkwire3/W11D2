@@ -5,15 +5,16 @@ import SelectedCoffeeBean from "./components/SelectedCoffeeBean";
 
 function App() {
   const {coffeeBean, setCoffeeBean} = useCoffeeContext();
-  const temp = SetCoffeeBean({coffeeBeans});
-  console.log('temp: ', temp);
-  console.log(useCoffeeContext())
+
+   const handleChange = (e) => {
+    console.log('change event', e)
+  }
   return (
     <>
     <div>
       <h1>Welcome to Coffee App</h1>
-      {temp}
-      {SelectedCoffeeBean}
+
+      <SetCoffeeBean coffeeBeans={coffeeBeans} onChange={handleChange}/>
     </div>
     </>
   );
